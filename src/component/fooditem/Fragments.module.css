@@ -1,0 +1,24 @@
+.list-group {
+}
+.foodHeading {
+  font-weight: bolder;
+  color: #fd5200;
+  margin: 50px 0px;
+  text-align: center;
+  font-size: 3rem;
+}
+.error-message {
+  background: #fafafa;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.containerCss {
+  border: solid 1px #dee2e6;
+  padding: 15px;
+  border-radius: 15px;
+  margin-top: 15px;
+}

@@ -1,0 +1,350 @@
+.foodMenuOuter {
+  margin-top: 30px;
+}
+.accorHeading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fafafa;
+  padding: 10px;
+}
+.accorHeading h4 {
+  font-weight: 700;
+  margin-bottom: 0px;
+}
+.accordianData ul {
+  list-style: none;
+}
+.vegIcon {
+  width: 20px;
+  height: 20px;
+  border: solid 2px green;
+  position: relative;
+  display: block;
+  position: relative;
+}
+.vegIcon:before {
+  width: 9px;
+  height: 9px;
+  background: green;
+  content: "";
+  border-radius: 100%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+}
+.nonVegIcon {
+  width: 20px;
+  height: 20px;
+  border: solid 2px #ff0000;
+  position: relative;
+  display: block;
+  position: relative;
+}
+.nonVegIcon:before {
+  width: 9px;
+  height: 9px;
+  background: #ff0000;
+  content: "";
+  border-radius: 100%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+}
+.accordianData ul {
+  margin: 30px 0px 0px 0px;
+  padding: 0px 15px;
+}
+.accordianData ul li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 1px #cbcbcb;
+  margin-bottom: 15px;
+}
+.accordianData ul li:last-child {
+  border-bottom: 0px;
+}
+.itemImage img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 10px;
+}
+.itemName {
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  color: #282828;
+}
+.itemPrice {
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.itemImage {
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.addBtn {
+  color: #008000;
+  background: #fff;
+  border: solid 2px #919191;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 5px 30px;
+  width: calc(100% - 30px);
+  transform: translate(0px, -15px);
+}
+.quantityBtn {
+  color: #008000;
+  background: #fff;
+  border: solid 2px #919191;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 5px 15px;
+  width: calc(100% - 30px);
+  transform: translate(0px, -15px);
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.quantityBtn svg {
+  color: #008000;
+  stroke: #008000;
+}
+
+.loginSignupBtn {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+}
+.accountouter ul {
+  margin: 0;
+  padding: 0;
+}
+.accountBtn {
+  border: solid 1px rgb(4, 175, 4);
+  background: none;
+  padding: 8px 20px;
+  color: rgb(4, 175, 4);
+}
+.accountBtn p {
+  font-size: 11px;
+  margin-bottom: 0px;
+  opacity: 0.9;
+}
+.accountBtn h5 {
+  font-size: 14px;
+  margin-bottom: 0px;
+  font-weight: bold;
+}
+.accountouter ul {
+  list-style: none;
+}
+.accountouter ul li .acouter {
+  padding: 30px 30px 30px 40px;
+  background: #fafafa;
+  box-shadow: 0px 0px 9px rgb(68 67 67 / 26%);
+  border-radius: 5px;
+  transform: translate(-10px, 0px);
+  width: 100%;
+}
+.accountouter ul li h4 {
+  font-weight: bold;
+}
+.accountouter ul li h6 {
+  color: #282828;
+  font-size: 14px;
+}
+.accicon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  z-index: 9;
+}
+.accicon svg {
+  width: 50px;
+  fill: #fff;
+  stroke: #fff;
+}
+.mainOuter {
+  display: flex;
+  align-items: center;
+  padding-bottom: 50px;
+  position: relative;
+}
+.mainOuter:before {
+  position: absolute;
+  content: "";
+}
+.resdtl {
+  display: flex;
+  gap: 15px;
+  background: #fafafa;
+  padding: 10px;
+}
+.resdtl .resImg {
+  width: 80px;
+}
+.resdtl .resImg img {
+  max-width: 100%;
+  object-fit: cover;
+}
+.resdtl .nameDtl h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+.resdtl .nameDtl p {
+  font-size: 12px;
+  margin-bottom: 0px;
+}
+.checkout {
+  margin-top: 30px;
+}
+.CartList {
+  margin: 0px 0px 0px 0px;
+  padding: 20px 10px 10px 10px;
+  background: #fafafa;
+  list-style: none;
+}
+.CartList li {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  border-bottom: solid 1px #282828;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  justify-content: space-between;
+}
+.vgctPrice {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-basis: 200px;
+}
+.BillDetails h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+.BillDetails ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.BillDetails ul li {
+  border-bottom: solid 1px #6b6b6b73;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+.BillDetails ul li .totBill {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.totBillPay {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: bold;
+}
+.payBtn {
+  width: 100%;
+  height: 44px;
+  background: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border: none;
+  text-transform: uppercase;
+}
+.BillDetails {
+  padding: 15px 10px 10px 10px;
+  background: #fafafa;
+}
+.noData {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  padding: 50px;
+  border-top: solid 1px #282828;
+  border-bottom: solid 1px #282828;
+  font-weight: bold;
+}
+.noData img {
+  max-width: 300px;
+  opacity: 0.8;
+}
+.noData h4 {
+  font-weight: 700;
+}
+.noData p {
+  font-size: 14px;
+}
+* .itemDescription {
+  font-size: 14px;
+  margin-top: 10px;
+  width: calc(100% - 30px);
+}
+.itemLabel {
+  max-width: calc(100% - 40px);
+}
+.addListOuter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+  margin-top: 30px;
+}
+.addRess {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  grid-gap: 15px;
+  border: solid 1px #dcdcdc;
+  padding: 15px;
+}
+.addListOuter h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+.addListOuter h5 {
+  font-size: 14px;
+  font-size: 14px;
+  color: #8c8c8c;
+  line-height: 22px;
+}
+.addListOuter p {
+  font-size: 12px;
+  font-weight: 600;
+}
+.deliverBtn {
+  background: #8bc34a;
+  color: #fff;
+  font-size: 12px;
+  border: solid 1px #6d9a38;
+  padding: 5px 12px;
+}
+.proceedBtn {
+  width: 100%;
+  background: #8bc34a;
+  color: #fff;
+  font-size: 16px;
+  border: solid 1px #6d9a38;
+  padding: 5px 12px;
+}

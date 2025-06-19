@@ -1,0 +1,65 @@
+.loginModal {
+  position: absolute !important;
+  right: 0;
+  padding: 0;
+  margin: 0 !important;
+  top: 0;
+  height: 100% !important;
+}
+
+.topSection h4 {
+  font-size: 24px;
+  font-weight: 700;
+}
+.topSection p {
+  font-size: 14px;
+}
+.topSection p span {
+  font-weight: 600;
+  color: green;
+  cursor: pointer;
+}
+.loginModal .ModalContentCstm {
+  border-radius: 0px;
+  max-width: 600px;
+  width: 600px;
+  border: solid 1px #fff;
+  height: 100% !important;
+}
+.loginBtn {
+  background: #1aaf06;
+  color: #fff;
+  border: #1aaf06;
+  width: 300px;
+  height: 40px;
+  margin-top: 15px;
+}
+.formInput {
+  height: 50px;
+  border-radius: 0 !important;
+  font-size: 14px !important;
+  margin-top: 5px !important;
+}
+.cstmFont {
+  font-size: 14px;
+  margin-top: 15px;
+}
+.cstmFont span {
+  font-weight: 600;
+}
+.formGroup {
+  margin-top: 10px;
+}
+.formGroup p {
+  font-size: 14px;
+  margin-bottom: 0px;
+  font-weight: 600;
+}
+.mainSec {
+  margin-top: 50px !important;
+}
+.closeBtn {
+  border: none;
+  background: transparent;
+  font-size: 32px;
+}

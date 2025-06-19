@@ -1,0 +1,21 @@
+.LoginForm {
+}
+.formGroup {
+  margin-bottom: 10px;
+}
+.loginBtn {
+  background: #1aaf06;
+  color: #fff;
+  border: #1aaf06;
+  width: 300px;
+  height: 40px;
+  margin-top: 0px;
+}
+.formInput {
+  height: 50px;
+  border-radius: 0;
+}
+.termsPrivacy {
+  font-size: 14px;
+  margin-top: 10px;
+}

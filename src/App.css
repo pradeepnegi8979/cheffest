@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  font-family: "Montserrat", serif !important;
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.nav-item {
+  padding-left: 40px;
+}
+.nav-item:first-child {
+  padding-right: 0;
+}
+.nav-item a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #3d4152 !important;
+  font-weight: 600;
+  font-size: 14px;
+}
+.seperator {
+  background: #fafafa;
+  height: 5px;
+}
+.cartItem {
+  position: absolute;
+  bottom: -45px;
+  background: #fff;
+  border-radius: 5px;
+}
+.cartItem ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.cartItem ul li {
+  font-size: 14px;
+  border-bottom: solid 1px #282828;
+  padding: 10px;
+}
+.swiper {
+  position: relative;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  top: -30px;
+}
+.navbar-brand img {
+  max-width: 100px;
+}
+.modal.fade .modal-dialog {
+  transform: translate(600px, 0px);
+  transition: unset;
+}
+.modal.fade .modal-dialog {
+  transform: translate(0px, 0px) !important;
+  transition: unset;
+}

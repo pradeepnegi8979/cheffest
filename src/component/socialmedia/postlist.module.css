@@ -1,0 +1,18 @@
+.headingText {
+  font-size: 24px;
+  color: #282828;
+  line-height: 36px;
+}
+.headingBody {
+  font-size: 14px;
+  color: #282828;
+  line-height: 24px;
+}
+.postDataOuter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.postDataOuter > div {
+  flex-basis: 31.95%;
+}

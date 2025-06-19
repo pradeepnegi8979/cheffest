@@ -1,0 +1,29 @@
+.Todo-Container > center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.Todo-Container > center > .container {
+  background: #f6f6f6;
+  padding: 30px;
+}
+.foodHeading {
+  color: #282828;
+  font-size: 3rem;
+  font-weight: bolder;
+}
+.welcomeMessage {
+  font-size: 32px;
+  font-weight: bolder;
+}
+.messageOuter {
+  margin-top: 25px;
+  padding: 100px;
+  background: #f2f2f21c;
+  border: solid 1px #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
