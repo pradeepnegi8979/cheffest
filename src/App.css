@@ -93,6 +93,19 @@ header {
  max-width:20px;
  fill:#fff;
 }
+.cart_value{
+  position: absolute;
+    right: -15px;
+    top: -15px;
+    width: 30px;
+    height: 30px;
+    background: #399c2c;
+    color: #fff;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .for-mobile_menu {display: none;}
 @media(max-width:768px){
   .d-none-for-mob{display:none;}
