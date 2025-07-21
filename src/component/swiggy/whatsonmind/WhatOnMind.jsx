@@ -2,7 +2,7 @@ import { Seperator } from "../../common/Seperator";
 import styles from "./whatonmind.module.css";
 import WhatOnMindList from "./WhatOnMindList";
 const WhatOnMind = () => {
-  let WhatOnMindHeading = "What's on your mind?";
+  let WhatOnMindHeading = "What's on your mind?xczxzcxz";
   return (
     <>
       <section className={styles.whatOnMind}>
