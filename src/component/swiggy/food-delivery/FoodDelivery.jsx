@@ -6,7 +6,7 @@ import styles from "./fooddelivery.module.css";
 
 const FoodDelivery = () => {
   const [selectedFilter, setSelectedFilter] = useState();
-  let headingText = "Restaurants with online food delivery in Noida fasdfa";
+  let headingText = "Restaurants with online food delivery in Noida";
 
   return (
     <>
