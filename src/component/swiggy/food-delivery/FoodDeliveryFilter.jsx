@@ -5,7 +5,7 @@ import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 const FoodDeliveryFilter = ({ handleOnClick, setSelectedFilter }) => {
   const [activeTabs, setActiveTabs] = useState(0);
   handleOnClick = (name) => {
-    console.log("selected button", name.buttonname);
+    //console.log("selected button", name.buttonname);
     setActiveTabs(name.id);
     setSelectedFilter(name);
   };
@@ -59,6 +59,11 @@ const FoodDeliveryFilter = ({ handleOnClick, setSelectedFilter }) => {
     {
       id: "08",
       buttonname: "Less than Rs.300",
+      buttonIcon: "",
+    },
+    {
+      id: "09",
+      buttonname: "Buy 1 Get 1 Free",
       buttonIcon: "",
     },
   ];

@@ -17,7 +17,6 @@ const FoodDelivery = () => {
             <div className="col-md-12">
               <div className="row">
                 <FoodDeliveryFilter setSelectedFilter={setSelectedFilter} />
-
                 <FoodDeliveryResList selectedFilter={selectedFilter} />
               </div>
             </div>

@@ -39,7 +39,7 @@ const TopRestaurantList = () => {
     },
     {
       id: "02",
-      image: bakery,
+      image: biryani,
       item_startp_price: "10% off above Rs 1099",
       restaurant_name: "Bakery Word",
       restaurant_rating: "4.3",
@@ -50,7 +50,7 @@ const TopRestaurantList = () => {
     },
     {
       id: "03",
-      image: noodles,
+      image: pizza,
       item_startp_price: "Items at 99",
       restaurant_name: "pizza hut",
       restaurant_rating: "4.2",
@@ -61,7 +61,7 @@ const TopRestaurantList = () => {
     },
     {
       id: "04",
-      image: noodles,
+      image: rolls,
       item_startp_price: "Items at 99",
       restaurant_name: "pizza hut",
       restaurant_rating: "4.2",
@@ -72,7 +72,7 @@ const TopRestaurantList = () => {
     },
     {
       id: "05",
-      image: noodles,
+      image: parantha,
       item_startp_price: "Items at 99",
       restaurant_name: "pizza hut",
       restaurant_rating: "4.2",
@@ -84,7 +84,7 @@ const TopRestaurantList = () => {
 
     {
       id: "06",
-      image: noodles,
+      image: pureveg,
       item_startp_price: "Items at 99",
       restaurant_name: "pizza hut",
       restaurant_rating: "4.2",
@@ -95,7 +95,7 @@ const TopRestaurantList = () => {
     },
     {
       id: "07",
-      image: noodles,
+      image: tea,
       item_startp_price: "Items at 99",
       restaurant_name: "pizza hut",
       restaurant_rating: "4.2",
@@ -106,7 +106,7 @@ const TopRestaurantList = () => {
     },
     {
       id: "08",
-      image: noodles,
+      image: gulabjamun,
       item_startp_price: "Items at 99",
       restaurant_name: "pizza hut",
       restaurant_rating: "4.2",
@@ -117,7 +117,18 @@ const TopRestaurantList = () => {
     },
     {
       id: "09",
-      image: noodles,
+      image: coffee,
+      item_startp_price: "Items at 99",
+      restaurant_name: "pizza hut",
+      restaurant_rating: "4.2",
+      deliver_timing: ". 25-30 mins",
+      restaurant_item_name: "Pizza",
+      restaurant_location: "Noida",
+      item_status: "available",
+    },
+    {
+      id: "10",
+      image: bakery,
       item_startp_price: "Items at 99",
       restaurant_name: "pizza hut",
       restaurant_rating: "4.2",
@@ -136,27 +147,27 @@ const TopRestaurantList = () => {
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           navigation
            breakpoints={{
-    320: {
-      slidesPerView:2,
-      spaceBetween: 15,
-    },
-    475: {
-      slidesPerView: 3,
-      spaceBetween: 20,
-    },
-    768: {
-      slidesPerView: 3.5,
-      spaceBetween: 25,
-    },
-    1024: {
-      slidesPerView: 5.5,
-      spaceBetween: 30,
-    },
-    1280: {
-      slidesPerView: 6.5,
-      spaceBetween: 35,
-    },
-  }}
+            320: {
+              slidesPerView:2,
+              spaceBetween: 15,
+            },
+            475: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 3.5,
+              spaceBetween: 25,
+            },
+            1024: {
+              slidesPerView: 5.5,
+              spaceBetween: 30,
+            },
+            1280: {
+              slidesPerView: 6.5,
+              spaceBetween: 35,
+            },
+          }}
         >
           {restaurantList.map((item) => (
             <SwiperSlide className={styles.topRestaurant} key={item.id}>

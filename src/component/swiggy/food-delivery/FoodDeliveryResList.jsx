@@ -1,13 +1,11 @@
-import { IoStar } from "react-icons/io5";
-
-import hotelList from "./HotelList.js";
-import styles from "./fooddelivery.module.css";
-import { useSelector } from "react-redux";
-import { useEffect, useState } from "react";
-
-import { Link } from "react-router-dom";
-import Modal from "../modal/Modal.jsx";
-const FoodDeliveryResList = ({ selectedFilter }) => {
+  import { IoStar } from "react-icons/io5";
+  import hotelList from "./HotelList.js";
+  import styles from "./fooddelivery.module.css";
+  import { useSelector } from "react-redux";
+  import { useEffect, useState } from "react";
+  import { Link } from "react-router-dom";
+  import Modal from "../modal/Modal.jsx";
+  const FoodDeliveryResList = ({ selectedFilter }) => {
   //const { cart } = useSelector((state) => state.cart);
   const [resList, setResList] = useState([]);
   //const [modalVisible, setModalVisible] = useState(false);
@@ -34,26 +32,19 @@ const FoodDeliveryResList = ({ selectedFilter }) => {
         ? restaurantList?.filter((item) => item.pure_veg === "yes")
         : selectedFilter?.id === "06"
         ? restaurantList?.filter((item) => item.offers === "yes")
+        :selectedFilter?.id === "09"
+        ? restaurantList?.filter((item) => item.buy_get_1_free === "yes")
         : restaurantList;
-
-    setResList(res);
+      setResList(res);
   }, [selectedFilter, restaurantList]);
-
   return (
     <>
       <div className={styles.topRestaurantOuter}>
         {resList.map((item) => (
           <div key={item.id}>
-            <div
-              className={`${styles.topRestaurant} ${
-                item.hotel_Availability != "yes" && styles.disabled
-              }`}
-            >
+            <div className={`${styles.topRestaurant} ${item.hotel_Availability != "yes" && styles.disabled}`}>
               {/* {modalVisible && <Modal />} */}
-              <Link
-                to={`/${item.id}`}
-                // onClick={() => handleExistingItem(item.id)}
-              >
+              <Link to={`/${item.id}`} >
                 <div className={styles.topResImg}>
                   <img src={item.hotel_image} />
                   <h4 className={styles.itemsPriceOnward}>
@@ -62,10 +53,7 @@ const FoodDeliveryResList = ({ selectedFilter }) => {
                 </div>
                 <div className="resDtl">
                   <p className={styles.itemCatName}>{item.hotel_name}</p>
-                  <p className={styles.itemDelTime}>
-                    <span>
-                      <IoStar />
-                    </span>
+                  <p className={styles.itemDelTime}><span><IoStar /></span>
                     {item.hotel_rating} <strong>{item.deliver_timing}</strong>
                   </p>
                   <p className={styles.itemName}>{item.hotel_food}</p>

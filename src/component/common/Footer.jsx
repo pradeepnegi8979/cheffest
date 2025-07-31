@@ -5,7 +5,7 @@ const Footer = () => {
   const { cart } = useSelector((state) => state.cart);
   return (
     <>
-    <div class="for-mobile_menu">
+    <div className="for-mobile_menu">
       <div className="container">
         <div className="row">
           <div className="col-md-12">

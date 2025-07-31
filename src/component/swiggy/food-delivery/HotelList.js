@@ -372,6 +372,7 @@ const hotelList = [
     deliver_timing: "25-30 mins",
     hotel_Availability: "yes",
     pure_veg: "yes",
+    buy_get_1_free: "yes",
     hotel_item_lists: [
       {
         item_id: "01",
@@ -1072,6 +1073,40 @@ const hotelList = [
       },
     ],
   },
+   {
+    id: "13",
+    hotel_name: "Megnum",
+    hotel_rating: "4.8 (1.5K+ ratings)",
+    hotel_offer: " 300 OFF ABOVE 999",
+    hotel_image: Images.biryani,
+    hotel_food: "South Indian",
+    hotel_location: "Indirapuram",
+    hotel_items: "Biryani, Chicken Soup, Chillie Chicken",
+    restaurant_name: "Apni Rasoi Family Dhaba",
+    fast_dilever: "no",
+    deliver_timing: "25-30 mins",
+    hotel_Availability: "yes",
+    pure_veg: "no",
+    hotel_item_lists: [
+      {
+        item_id: "01",
+        itemName: "Chicken Biryani",
+        itemImage: Images.biryani,
+        itemPrice: 234,
+        itemSymbol: "non veg",
+        itemDescription:
+          "A luscious and creamy vegetarian delight featuring a perfect blend of spinach and soft pieces of homemade cheese.",
+      },
+      {
+        item_id: "02",
+        itemName: "Chillie Veg Manchurian",
+        itemImage: Images.vegManchurian,
+        itemPrice: 199,
+        itemSymbol: "veg",
+        itemDescription:
+          "A delectable vegetarian delight, bursting with flavor and perfect for a hearty starter.",
+      },
+    ],
+  },
 ];
-
 export default hotelList;

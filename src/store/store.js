@@ -15,7 +15,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import cartReducer from "../features/cart/cartSlice";
 import authReducer from "../features/auth/authAction";
-import { loadState, saveState } from "../store/localStorage"; // ✅ helper import
+import { loadState, saveState } from "../store/localStorage"; 
 
 // 🔁 Step 1: Load cart state from localStorage
 const persistedState = loadState();

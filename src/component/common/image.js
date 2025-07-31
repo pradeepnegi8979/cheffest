@@ -1,5 +1,4 @@
 import noodles from "../../../src/assets/swiggyImages/noodles.png";
-
 import biryani from "../../../src/assets/swiggyImages/biryani.webp";
 import pizza from "../../../src/assets/swiggyImages/pizza.jpg";
 import rolls from "../../../src/assets/swiggyImages/rolls.jpeg";
