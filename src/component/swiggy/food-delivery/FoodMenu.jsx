@@ -1,76 +1,32 @@
-import { IoIosArrowUp } from "react-icons/io";
-import styles from "./foodmenu.module.css";
-
 import { useDispatch, useSelector } from "react-redux";
 import {
-  addToCart,
   setHotelInformation,
+  addItemToCart,
+  incrementItem,
+  decrementItem,    // Make sure to import decrementItem here
 } from "../../../features/cart/cartSlice";
-
 import { FiMinus } from "react-icons/fi";
 import { IoMdAdd } from "react-icons/io";
+import styles from "./foodmenu.module.css";
 import { toast, ToastContainer } from "react-toastify";
 
 const FoodMenu = ({ currentData }) => {
   const dispatch = useDispatch();
+  const cart = useSelector((state) => state.cart.cart);
+  const hotelInformation = useSelector((state) => state.cart.hotelInformation);
 
-  const cartItems = useSelector((state) => state.cart.cart); // get items from redux
-  const hotelInfo = useSelector((state) => state.cart.hotelInfo); // get hotel info from redux
+  const getCount = (item) => {
+    const cartItem = cart.find((i) => i.item_id === item.item_id);
+    return cartItem ? cartItem.count : 0;
+  };
 
-  const handleAddToCart = (item, data) => {
-    if (!hotelInfo) {
-      dispatch(setHotelInformation(data)); // only set hotel info once
+  const handleAddToCart = (item) => {
+    if (!hotelInformation.hotel_id) {
+      dispatch(setHotelInformation(currentData));
     }
-
-    const existingItem = cartItems.find((i) => i.item_id === item.item_id);
-    if (existingItem) {
-      dispatch(
-        addToCart(
-          cartItems.map((i) =>
-            i.item_id === item.item_id
-              ? { ...i, count: i.count + 1 }
-              : i
-          )
-        )
-      );
-    } else {
-      dispatch(addToCart([...cartItems, { ...item, count: 1 }]));
-    }
-
+    dispatch(addItemToCart(item));
     toast.success(`Item Added: ${item.itemName}`);
   };
-
-  const handleIncrement = (item) => {
-    const updatedItems = cartItems.map((i) =>
-      i.item_id === item.item_id ? { ...i, count: i.count + 1 } : i
-    );
-    dispatch(addToCart(updatedItems));
-  };
-
-  const handleDecrement = (item) => {
-    const existingItem = cartItems.find((i) => i.item_id === item.item_id);
-
-    if (!existingItem) return;
-
-    if (existingItem.count === 1) {
-      const filteredItems = cartItems.filter(
-        (i) => i.item_id !== item.item_id
-      );
-      dispatch(addToCart(filteredItems));
-    } else {
-      const updatedItems = cartItems.map((i) =>
-        i.item_id === item.item_id
-          ? { ...i, count: i.count - 1 }
-          : i
-      );
-      dispatch(addToCart(updatedItems));
-    }
-
-    toast.error(`Item Removed: ${item.itemName}`);
-  };
-
-  const getCount = (item) =>
-    cartItems.find((i) => i.item_id === item.item_id)?.count ?? 0;
 
   return (
     <>
@@ -79,12 +35,8 @@ const FoodMenu = ({ currentData }) => {
         <div className="accordian">
           <div className="accordianList">
             <div className={styles.accorHeading}>
-              <h4>
-                Crazy Deal Combos ({currentData.hotel_item_lists.length})
-              </h4>
-              <IoIosArrowUp />
+              <h4>Crazy Deal Combos ({currentData.hotel_item_lists.length})</h4>
             </div>
-
             <div className={styles.accordianData}>
               <ul>
                 {currentData?.hotel_item_lists?.map((item) => (
@@ -99,35 +51,32 @@ const FoodMenu = ({ currentData }) => {
                       ></label>
                       <p className={styles.itemName}>{item.itemName}</p>
                       <p className={styles.itemPrice}>Rs.{item.itemPrice}</p>
-                      <p className={styles.itemDescription}>
-                        {item.itemDescription}
-                      </p>
+                      <p className={styles.itemDescription}>{item.itemDescription}</p>
                     </div>
-
                     <div className={styles.itemImage}>
                       <img src={item.itemImage} alt={item.itemName} />
-
                       {!getCount(item) ? (
                         <button
                           className={styles.addBtn}
-                          onClick={() =>
-                            handleAddToCart(item, currentData)
-                          }
+                          onClick={() => handleAddToCart(item)}
                         >
                           ADD
                         </button>
                       ) : (
                         <div className={styles.quantityBtn}>
+                          {/* Decrement button fixed here */}
                           <span
                             className="decrementBtn"
-                            onClick={() => handleDecrement(item)}
+                            onClick={() => dispatch(decrementItem(item.item_id))}
                           >
                             <FiMinus />
                           </span>
+
                           <span>{getCount(item)}</span>
+
                           <span
                             className="incrementBtn"
-                            onClick={() => handleIncrement(item)}
+                            onClick={() => dispatch(addItemToCart(item))}
                           >
                             <IoMdAdd />
                           </span>
